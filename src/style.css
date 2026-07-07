@@ -144,7 +144,7 @@ main {
 
 .viewer-frame {
   position: relative;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 4;
   background: #000;
   border-radius: var(--radius);
   overflow: hidden;
@@ -309,21 +309,45 @@ main {
 }
 
 .mini-grid a {
-  display: block;
-  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
+  background: var(--panel);
 }
 
 .mini-grid a.current {
   border-color: var(--accent);
 }
 
+.mini-grid a .thumb {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  display: block;
+}
+
 .mini-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.mini-grid .mini-name {
+  display: block;
+  font-size: 11px;
+  line-height: 1.3;
+  padding: 4px 4px 5px;
+  text-align: center;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-grid a.current .mini-name {
+  color: var(--text);
 }
 
 footer.site-footer {

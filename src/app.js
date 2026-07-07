@@ -88,7 +88,8 @@ function renderDetail(brick) {
               ${BRICKS.map(
                 (b) => `
                 <a href="#/${b.slug}" class="${b.slug === brick.slug ? "current" : ""}" title="${b.name}">
-                  <img src="${b.thumb}" alt="${b.name}" loading="lazy" />
+                  <span class="thumb"><img src="${b.thumb}" alt="${b.name}" loading="lazy" /></span>
+                  <span class="mini-name">${b.name}</span>
                 </a>`
               ).join("")}
             </div>
